@@ -1,0 +1,89 @@
+unit unPrincipal;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.StdCtrls;
+
+type
+  TForm1 = class(TForm)
+    Label1: TLabel;
+    Label2: TLabel;
+    txtNum1: TEdit;
+    txtNum2: TEdit;
+    btSomar: TButton;
+    Label3: TLabel;
+    btSubtrair: TButton;
+    btDividir: TButton;
+    btMultiplicar: TButton;
+    Label4: TLabel;
+    txtResultado: TEdit;
+    procedure btSomarClick(Sender: TObject);
+    procedure btSubtrairClick(Sender: TObject);
+    procedure btMultiplicarClick(Sender: TObject);
+    procedure btDividirClick(Sender: TObject);
+  private
+   { Private declarations }
+    procedure CalcularResultado(operacao: String);
+
+  public
+    { Public declarations }
+  end;
+
+var
+  Form1: TForm1;
+
+implementation
+
+{$R *.dfm}
+
+// Assim que o evento onclick é clicado, ele gera esse código com o procedimento.
+procedure TForm1.btSomarClick(Sender: TObject);
+begin
+  CalcularResultado('somar')
+end;
+
+procedure TForm1.btSubtrairClick(Sender: TObject);
+begin
+  CalcularResultado('subtrair')
+end;
+
+procedure TForm1.btMultiplicarClick(Sender: TObject);
+begin
+  CalcularResultado('multiplicar')
+end;
+
+procedure TForm1.btDividirClick(Sender: TObject);
+begin
+  CalcularResultado('dividir')
+end;
+
+
+procedure TForm1.CalcularResultado(operacao: String);
+var
+  num1, num2: Real;
+  resultado: Real;
+
+begin
+  num1 := StrToFloat(txtnum1.Text);
+  num2 := StrToFloat(txtnum2.Text);
+
+  if operacao = 'somar' then
+    resultado:= num1 + num2;
+
+  if operacao = 'subtrair' then
+    resultado := num1 - num2;
+
+  if operacao = 'multiplicar' then
+    resultado := num1 * num2;
+
+  if operacao = 'dividir' then
+    resultado := num1 / num2;
+
+
+
+  txtResultado.Text := FloatToStr(resultado);
+end;
+
+end.

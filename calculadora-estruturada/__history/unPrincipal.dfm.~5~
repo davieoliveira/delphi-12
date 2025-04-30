@@ -1,0 +1,102 @@
+object Form1: TForm1
+  Left = 0
+  Top = 0
+  BorderIcons = [biSystemMenu, biMinimize]
+  BorderStyle = bsSingle
+  Caption = 'Form1'
+  ClientHeight = 269
+  ClientWidth = 481
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -12
+  Font.Name = 'Segoe UI'
+  Font.Style = []
+  Position = poScreenCenter
+  TextHeight = 15
+  object Label1: TLabel
+    Left = 273
+    Top = 67
+    Width = 94
+    Height = 15
+    Caption = 'Segundo N'#250'mero'
+  end
+  object Label2: TLabel
+    Left = 97
+    Top = 67
+    Width = 92
+    Height = 15
+    Caption = 'Primeiro N'#250'mero'
+  end
+  object Label3: TLabel
+    Left = 209
+    Top = 24
+    Width = 63
+    Height = 15
+    Caption = 'Calculadora'
+  end
+  object Label4: TLabel
+    Left = 134
+    Top = 192
+    Width = 55
+    Height = 15
+    Caption = 'Resultado:'
+  end
+  object txtNum1: TEdit
+    Left = 97
+    Top = 88
+    Width = 121
+    Height = 23
+    TabOrder = 0
+  end
+  object txtNum2: TEdit
+    Left = 272
+    Top = 88
+    Width = 121
+    Height = 23
+    TabOrder = 1
+  end
+  object btSomar: TButton
+    Left = 161
+    Top = 144
+    Width = 25
+    Height = 25
+    Caption = '+'
+    TabOrder = 2
+    OnClick = btSomarClick
+  end
+  object btSubtrair: TButton
+    Left = 209
+    Top = 144
+    Width = 25
+    Height = 25
+    Caption = '-'
+    TabOrder = 3
+    OnClick = btSubtrairClick
+  end
+  object btDividir: TButton
+    Left = 312
+    Top = 144
+    Width = 25
+    Height = 25
+    Caption = #247
+    TabOrder = 4
+    OnClick = btDividirClick
+  end
+  object btMultiplicar: TButton
+    Left = 259
+    Top = 144
+    Width = 25
+    Height = 25
+    Caption = 'x'
+    TabOrder = 5
+    OnClick = btMultiplicarClick
+  end
+  object txtResultado: TEdit
+    Left = 195
+    Top = 189
+    Width = 121
+    Height = 23
+    TabOrder = 6
+  end
+end
