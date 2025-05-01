@@ -1,0 +1,40 @@
+unit Unit1;
+
+interface
+
+uses
+  Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
+  Dialogs, StdCtrls, Unit2;
+
+type
+  TForm1 = class(TForm)
+    EditMensagem: TEdit;
+    ButtonEnviar: TButton;
+    Label1: TLabel;
+    procedure ButtonEnviarClick(Sender: TObject);
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+    MensagemRecebida: string;
+  end;
+
+var
+  Form1: TForm1;
+
+implementation
+
+{$R *.dfm}
+
+procedure TForm1.ButtonEnviarClick(Sender: TObject);
+begin
+  Form2 := TForm2.Create(Self);
+  Form2.ReceberMensagem(EditMensagem.Text);
+  if Form2.ShowModal = mrOk then
+    ShowMessage('Usuário confirmou a mensagem!')
+  else
+    ShowMessage('Usuário cancelou a mensagem!');
+  Form2.Free;
+end;
+
+end.
