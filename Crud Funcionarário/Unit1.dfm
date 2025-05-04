@@ -1,0 +1,108 @@
+object Form1: TForm1
+  Left = 0
+  Top = 0
+  Caption = 'Form1'
+  ClientHeight = 496
+  ClientWidth = 632
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -12
+  Font.Name = 'Segoe UI'
+  Font.Style = []
+  TextHeight = 15
+  object Label1: TLabel
+    Left = 48
+    Top = 24
+    Width = 344
+    Height = 40
+    Caption = 'Cadastro de Funcion'#225'rio'
+    Font.Charset = ANSI_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -29
+    Font.Name = 'Segoe UI Black'
+    Font.Style = [fsBold]
+    ParentFont = False
+  end
+  object Label2: TLabel
+    Left = 48
+    Top = 171
+    Width = 116
+    Height = 15
+    Caption = 'Nome do Funcion'#225'rio'
+  end
+  object Label3: TLabel
+    Left = 48
+    Top = 227
+    Width = 21
+    Height = 15
+    Caption = 'CPF'
+  end
+  object Label4: TLabel
+    Left = 48
+    Top = 283
+    Width = 107
+    Height = 15
+    Caption = 'Data de Nascimento'
+  end
+  object DBEdit1: TDBEdit
+    Left = 48
+    Top = 192
+    Width = 257
+    Height = 23
+    DataField = 'nome'
+    DataSource = DM.dsContatos
+    TabOrder = 0
+  end
+  object DBEdit2: TDBEdit
+    Left = 48
+    Top = 248
+    Width = 153
+    Height = 23
+    DataField = 'cpf'
+    DataSource = DM.dsContatos
+    TabOrder = 1
+  end
+  object DBEdit3: TDBEdit
+    Left = 48
+    Top = 304
+    Width = 153
+    Height = 23
+    DataField = 'data_nascimento'
+    DataSource = DM.dsContatos
+    TabOrder = 2
+  end
+  object DBNavigator1: TDBNavigator
+    Left = 48
+    Top = 115
+    Width = 290
+    Height = 38
+    DataSource = DM.dsContatos
+    TabOrder = 3
+  end
+  object DBGrid1: TDBGrid
+    Left = 344
+    Top = 115
+    Width = 248
+    Height = 358
+    DataSource = DM.dsContatos
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -12
+    Font.Name = 'Segoe UI'
+    Font.Style = []
+    ParentFont = False
+    TabOrder = 4
+    TitleFont.Charset = DEFAULT_CHARSET
+    TitleFont.Color = clWindowText
+    TitleFont.Height = -12
+    TitleFont.Name = 'Segoe UI Black'
+    TitleFont.Style = []
+    Columns = <
+      item
+        Expanded = False
+        FieldName = 'nome'
+        Visible = True
+      end>
+  end
+end
