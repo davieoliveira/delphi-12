@@ -48,7 +48,7 @@ object Form1: TForm1
   object DBEdit1: TDBEdit
     Left = 24
     Top = 128
-    Width = 253
+    Width = 257
     Height = 23
     DataField = 'nome'
     DataSource = DM.dsContatos
@@ -57,7 +57,7 @@ object Form1: TForm1
   object DBEdit2: TDBEdit
     Left = 24
     Top = 184
-    Width = 149
+    Width = 153
     Height = 23
     DataField = 'cpf'
     DataSource = DM.dsContatos
@@ -70,7 +70,6 @@ object Form1: TForm1
     Height = 23
     DataField = 'data_nascimento'
     DataSource = DM.dsContatos
-    MaxLength = 8
     TabOrder = 2
   end
   object DBNavigator1: TDBNavigator
@@ -84,7 +83,7 @@ object Form1: TForm1
   object DBGrid1: TDBGrid
     Left = 320
     Top = 107
-    Width = 286
+    Width = 289
     Height = 220
     DataSource = DM.dsContatos
     Font.Charset = DEFAULT_CHARSET
@@ -103,16 +102,6 @@ object Form1: TForm1
       item
         Expanded = False
         FieldName = 'nome'
-        Visible = True
-      end
-      item
-        Expanded = False
-        FieldName = 'cpf'
-        Visible = True
-      end
-      item
-        Expanded = False
-        FieldName = 'data_nascimento'
         Visible = True
       end>
   end

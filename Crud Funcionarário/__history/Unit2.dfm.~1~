@@ -1,7 +1,6 @@
 object DM: TDM
-  Height = 435
-  Width = 506
-  PixelsPerInch = 120
+  Height = 348
+  Width = 405
   object conaxao: TFDConnection
     Params.Strings = (
       'Database=empresa'
@@ -9,8 +8,8 @@ object DM: TDM
       'DriverID=MySQL')
     Connected = True
     LoginPrompt = False
-    Left = 140
-    Top = 140
+    Left = 112
+    Top = 112
   end
   object tbFuncionarios: TFDTable
     Active = True
@@ -18,8 +17,8 @@ object DM: TDM
     Connection = conaxao
     ResourceOptions.AssignedValues = [rvEscapeExpand]
     TableName = 'empresa.funcionarios'
-    Left = 280
-    Top = 140
+    Left = 224
+    Top = 112
     object tbFuncionariosid: TFDAutoIncField
       FieldName = 'id'
       Origin = 'id'
@@ -35,19 +34,17 @@ object DM: TDM
       FieldName = 'cpf'
       Origin = 'cpf'
       Required = True
-      EditMask = '000.000.000-00;1;_'
-      Size = 14
+      Size = 11
     end
     object tbFuncionariosdata_nascimento: TDateField
       FieldName = 'data_nascimento'
       Origin = 'data_nascimento'
       Required = True
-      EditMask = '!99/99/0000;1;_'
     end
   end
   object dsContatos: TDataSource
     DataSet = tbFuncionarios
-    Left = 280
-    Top = 240
+    Left = 224
+    Top = 192
   end
 end

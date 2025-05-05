@@ -35,14 +35,12 @@ object DM: TDM
       FieldName = 'cpf'
       Origin = 'cpf'
       Required = True
-      EditMask = '000.000.000-00;1;_'
-      Size = 14
     end
     object tbFuncionariosdata_nascimento: TDateField
       FieldName = 'data_nascimento'
       Origin = 'data_nascimento'
       Required = True
-      EditMask = '!99/99/0000;1;_'
+      EditMask = '!99/99/00;1;_'
     end
   end
   object dsContatos: TDataSource

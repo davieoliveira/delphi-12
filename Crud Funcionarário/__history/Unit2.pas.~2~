@@ -17,8 +17,8 @@ type
     dsContatos: TDataSource;
     tbFuncionariosid: TFDAutoIncField;
     tbFuncionariosnome: TStringField;
-    tbFuncionariosdata_nascimento: TDateField;
     tbFuncionarioscpf: TStringField;
+    tbFuncionariosdata_nascimento: TDateField;
   private
     { Private declarations }
   public
